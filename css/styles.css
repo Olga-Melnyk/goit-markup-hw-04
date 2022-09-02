@@ -20,6 +20,7 @@
 
   /* Icons colors */
   --light-ic-cl: #afb1b8;
+  --grey-ic-cl: #444551;
 
   /* Others */
 }
@@ -433,6 +434,12 @@ img {
   padding-bottom: 60px;
 }
 
+.footer-container {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+}
+
 .footer .link-logo {
   display: block;
 
@@ -475,6 +482,50 @@ img {
 .footer .link:hover,
 .footer .link:focus {
   color: var(--accent-txt-cl);
+}
+
+.footer-desc {
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+
+  color: var(--white-txt-cl);
+
+  margin-bottom: 20px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+
+  width: 206px;
+}
+
+.footer-icon-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--grey-ic-cl);
+
+  border-radius: 50%;
+}
+
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+  background-color: var(--accent-bg-cl);
+}
+
+.footer-icon {
+  fill: var(--white-txt-cl);
 }
 
 /* Портфоліо */
