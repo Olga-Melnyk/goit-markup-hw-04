@@ -133,7 +133,8 @@ img {
 }
 
 .header .link {
-  display: block;
+  display: flex;
+  align-items: center;
 
   font-weight: 500;
   line-height: calc(16 / 14);
@@ -171,16 +172,11 @@ img {
 .header-contacts-link {
   display: flex;
   align-items: baseline;
-  gap: 10px;
 }
 
 .contacts-icon {
-  fill: var(--secondary-txt-cl);
-}
-
-.header-contacts-link:hover .contacts-icon,
-.header-contacts-link:focus .contacts-icon {
-  fill: var(--accent-txt-cl);
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Герой */
@@ -348,7 +344,7 @@ img {
 
   color: var(--secondary-txt-cl);
 
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .socials {
@@ -365,23 +361,20 @@ img {
   width: 44px;
   height: 44px;
 
+  color: var(--light-ic-cl);
   background-color: var(--white-bg-cl);
 
   border-radius: 50%;
 }
 
 .socials-icon {
-  fill: var(--light-ic-cl);
+  fill: currentColor;
 }
 
 .socials-link:hover,
 .socials-link:focus {
+  color: var(--white-bg-cl);
   background-color: var(--accent-bg-cl);
-}
-
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
-  fill: var(--white-txt-cl);
 }
 
 /* Постійні клієнти */
@@ -395,7 +388,7 @@ img {
   margin-bottom: 50px;
 }
 
-.container-icon {
+.clients-list {
   display: flex;
   gap: 30px;
 
@@ -403,26 +396,29 @@ img {
   margin-left: auto;
 }
 
-.client-btn {
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 170px;
   height: 92px;
 
   border: 1px solid var(--light-ic-cl);
+  color: var(--light-ic-cl);
   background-color: var(--white-bg-cl);
+
+  border-radius: 4px;
 }
 
 .clients-icon {
-  fill: var(--light-ic-cl);
+  fill: currentColor;
 }
 
-.client-btn:hover,
-.client-btn:focus {
-  border: 1px solid var(--accent-txt-cl);
-}
-
-.client-btn:hover .clients-icon,
-.client-btn:focus .clients-icon {
-  fill: var(--accent-txt-cl);
+.client-link:hover,
+.client-link:focus {
+  color: var(--accent-txt-cl);
+  border: 1px solid var(--accent-bg-cl);
 }
 
 /* footer */
@@ -436,8 +432,11 @@ img {
 
 .footer-container {
   display: flex;
-  gap: 70px;
-  align-items: center;
+  align-items: baseline;
+}
+
+.container-address {
+  margin-right: 70px;
 }
 
 .footer .link-logo {
@@ -492,13 +491,6 @@ img {
   color: var(--white-txt-cl);
 
   margin-bottom: 20px;
-}
-
-.footer-icons {
-  display: flex;
-  gap: 10px;
-
-  width: 206px;
 }
 
 .footer-icon-list {
@@ -559,6 +551,8 @@ img {
 .item-btn:focus {
   color: var(--white-txt-cl);
   background-color: var(--accent-bg-cl);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-card {
@@ -576,6 +570,16 @@ img {
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
+}
+
+.portfolio-card-link {
+  display: block;
+}
+
+.portfolio-card-link:hover,
+.portfolio-card-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .img-name {
